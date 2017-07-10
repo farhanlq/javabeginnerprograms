@@ -1,0 +1,19 @@
+package recursion;
+
+import java.util.Scanner;
+
+public class SumOfDigitsRecursion {
+
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		int num=scn.nextInt();
+		System.out.println(recursiveSumOfDigits(num));
+	}
+	public static int recursiveSumOfDigits(int num){
+		if(num>0)
+			return num%10 +recursiveSumOfDigits(num/10);
+		else
+			return 0;
+		
+	}
+}
