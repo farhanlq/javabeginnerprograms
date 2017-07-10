@@ -1,0 +1,24 @@
+package recursion;
+
+import java.util.Scanner;
+
+public class PowerN {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scn=new Scanner(System.in);	
+		int base=scn.nextInt();
+		int n=scn.nextInt();
+		System.out.println(recursivePowerN(base,n));
+	}
+
+	public static int recursivePowerN(int base, int N){
+		if(N==0)
+			return 1;
+		else if(N==1)
+			return base;
+		else
+			return base * recursivePowerN(base, N-1);
+	}
+}
