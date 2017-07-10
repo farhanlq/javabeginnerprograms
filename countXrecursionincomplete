@@ -1,0 +1,1 @@
+System.out.println(str.charAt(str.length()-1%10));
