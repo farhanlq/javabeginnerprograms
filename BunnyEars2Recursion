@@ -1,0 +1,21 @@
+package recursion;
+
+import java.util.Scanner;
+
+public class BunnyEars2Recursion {
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int num=scn.nextInt();
+		System.out.println(recursiveBunnyEars2(num));
+	}
+	
+	public static int recursiveBunnyEars2(int bunnies){
+		if(bunnies==0)
+			return 0;
+		else if(bunnies%2==0)
+			return 3+recursiveBunnyEars2(bunnies-1);
+		else 
+			return 2+recursiveBunnyEars2(bunnies-1);
+	}
+}
